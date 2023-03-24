@@ -6,8 +6,7 @@ trigger:
 - main
 pool:
   name: local
-  demands: 
-    - agents.name -equals TDL-FWWTXD3  
+  
 resources:
 - repo: self
 

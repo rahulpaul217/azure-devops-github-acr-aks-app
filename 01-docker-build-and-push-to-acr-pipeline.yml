@@ -11,13 +11,13 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '3ec80c6c-695e-4bcd-9264-1e66e24b4c46'
-  imageRepository: 'app1nginx'
+  imageRepository: 'app1-nginx'
   containerRegistry: 'rpdemo.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
-  vmImageName: local
+  vmImageName: ubuntu-latest
 
 stages:
 - stage: Build

@@ -34,7 +34,7 @@ stages:
         command: buildAndPush
         repository: custom2aksnginxapp1
         dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
+        containerRegistry: rpdemo
         tags: |
           $(tag)
     - task: CopyFiles@2

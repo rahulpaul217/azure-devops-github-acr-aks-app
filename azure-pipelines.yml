@@ -38,10 +38,7 @@ stages:
         tags: |
           $(tag)
  
-    - bash: echo 'build artifact stagin directory'; ls -R $(Build.ArtifactStagingDirectory)
-
-
-
+   
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'

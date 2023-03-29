@@ -37,12 +37,12 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
- 
-    - task: CmdLine@2
+    - task: CopyFiles@2
       inputs:
-        script: |
-          cd $(Build.StagingDirectory)
-          dir /b /s
+        SourceFolder: '$(Build.SourcesDirectory)'
+        Contents: '**'
+        TargetFolder: '$(Build.StagingDirectory)'
+ 
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'

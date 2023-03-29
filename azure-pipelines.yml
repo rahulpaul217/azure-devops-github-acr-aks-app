@@ -38,7 +38,11 @@ stages:
         tags: |
           $(tag)
  
-   
+    - task: CmdLine@2
+      inputs:
+        script: |
+          cd $(Build.StagingDirectory)
+          dir /b /s
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'

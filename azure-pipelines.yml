@@ -40,7 +40,7 @@ stages:
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(Build.SourcesDirectory)'
-        Contents: '**\kube-manifests'
+        Contents: '**\kube-manifests\**'
         TargetFolder: '$(Build.StagingDirectory)'
  
     - task: PublishBuildArtifacts@1
